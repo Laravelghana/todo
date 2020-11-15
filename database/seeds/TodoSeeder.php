@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class DatabaseSeeder extends Seeder
+class TodoSeeder extends Seeder
 {
     /**
      * Seed the application's database.
@@ -11,6 +11,6 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $this->call(TodoSeeder::class);
+        factory(App\Todo::class, 50)->create();
     }
 }
